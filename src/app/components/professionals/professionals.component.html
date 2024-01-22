@@ -1,0 +1,185 @@
+<section class="container-fluid bg-light  py-2">
+    <div class="alert alert-dark text-white font-weight-bold" role="alert">
+        <h5>Professionals-Details (Actor)</h5>
+    </div>
+
+    <div class="container pro">
+        <div class="row">
+            <form [formGroup]="professionalForm">
+                <div class="d-flex flex-row">
+                    <div class="p-2">
+                        <h4>Current Employement Type:</h4>
+                    </div>
+
+                    <div class="p-2" *ngFor="let item of empLoyeMent_Type">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="Emp_Type" [value]="item.name"
+                                [name]="item.key" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">{{item.name}}</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Years Of experience</label>
+                            <input type="text" [(ngModel)]="currentDate" [min]="0" name="Years" (keyup)="changeYears($event)"
+                                formControlName="years_Experience" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Years Of experience">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Job Title</label>
+                            <input type="text" name="job-title" formControlName="job_Title" class="form-control"
+                                id="exampleFormControlInput1" placeholder="job Title">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 py-2">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Job Description</label>
+                            <textarea class="form-control" name="job-des" formControlName="job_Description"
+                                placeholder="Job Description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 py-2">
+                    <label for="exampleFormControlInput1">Current Job localLity</label>
+                    <ng-multiselect-dropdown [placeholder]="'Current Job'" formControlName="current_Job"
+                        [settings]="dropdownSettings" [data]="['Indore Madhya Pradesh','Pune','Noida','Bhopal']"
+                        (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                    </ng-multiselect-dropdown>
+                </div>
+
+
+                <div class="col-md-12 py-2">
+                    <label for="exampleFormControlInput1">Desired Job Type</label>
+                    <ng-multiselect-dropdown [placeholder]="'Desired Job Type'" formControlName="desired_Job_Type"
+                        [settings]="dropdownSettings" [data]="jobType" [(ngModel)]="selectedItems" name="jobType"
+                        (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                    </ng-multiselect-dropdown>
+                </div>
+
+
+                <div class="col-md-12 py-2">
+                    <label for="exampleFormControlInput1">Desired Job Location</label>
+                    <ng-multiselect-dropdown [placeholder]="'Desired Job Location'"
+                        formControlName="desired_Job_Location" [settings]="dropdownSettings" [data]="jobLocation"
+                        name="jobLocation" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                    </ng-multiselect-dropdown>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4 py-2">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Clent Work With </label>
+                            <input type="text" name="Years" formControlName="clent_Work" class="form-control"
+                                id="exampleFormControlInput1" placeholder="Clent Work">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 py-2">
+                        <label for="exampleFormControlInput1">Association Associated With</label>
+                        <ng-multiselect-dropdown [placeholder]="'Association Associated'"
+                            formControlName="association_Associated" [settings]="dropdownSettings" [data]="experTies"
+                            [(ngModel)]="selectedAssocition" (onSelect)="onItemSelect($event)"
+                            (onSelectAll)="onSelectAll($event)">
+                        </ng-multiselect-dropdown>
+                    </div>
+
+                    <div class="col-md-4 py-2">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Association Liencence Number</label>
+                            <input type="text" name="job-title" formControlName="association_Liencence_Num"
+                                class="form-control" id="exampleFormControlInput1"
+                                placeholder="Association Liencence Number">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12">
+                    <label for="exampleFormControlInput1">Skills</label>
+                    <ng-multiselect-dropdown [placeholder]="'Skills'" formControlName="skills"
+                        [settings]="dropdownSettings" [data]="skiLLs" name="skills" [(ngModel)]="selectedSkills"
+                        (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                    </ng-multiselect-dropdown>
+                </div>
+
+
+                <div class="col-md-12">
+                    <label for="exampleFormControlInput1">Experties</label>
+                    <ng-multiselect-dropdown [placeholder]="'Experties'" formControlName="Experties"
+                        [settings]="dropdownSettings" [data]="experTies" name="skills" (onSelect)="onItemSelect($event)"
+                        (onSelectAll)="onSelectAll($event)">
+                    </ng-multiselect-dropdown>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-md-6 py-2">
+                        <label for="exampleFormControlInput1">Functional Industry</label>
+                        <ng-multiselect-dropdown [placeholder]="'Functional Industry'"
+                            formControlName="functional_Industry" [settings]="dropdownSettings"
+                            [data]="function_Industry" (onSelect)="onItemSelect($event)"
+                            (onSelectAll)="onSelectAll($event)">
+                        </ng-multiselect-dropdown>
+                    </div>
+
+                    <div class="col-md-6 py-2">
+                        <label for="exampleFormControlInput1">Functional Area</label>
+                        <ng-multiselect-dropdown [placeholder]="'Functional Area'" formControlName="functional_Area"
+                            [settings]="dropdownSettings" [data]="function_Area" (onSelect)="onItemSelect($event)"
+                            (onSelectAll)="onSelectAll($event)">
+                        </ng-multiselect-dropdown>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Notice Period (Days)</label>
+                            <input type="number" name="Years" [min]="0" [max]="90" formControlName="notice_Period"
+                                class="form-control" id="exampleFormControlInput1" placeholder="Notice Period">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 py-2">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Current Pay</label>
+                            <input type="number" name="job-title" [min]="0" formControlName="current_Pay"
+                                class="form-control" id="exampleFormControlInput1" placeholder="Current Pay (in lakhs)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center py-3">
+                    <button type="button" [disabled]="professionalForm.invalid" (click)="sendData()"
+                        class="btn btn-primary">Submit</button>
+                </div>
+
+
+            </form>
+
+            <div *ngIf="showOutput">
+                <p>Formatted Values:</p>
+                <p>Years of Experience: {{ professionalForm.value.years_Experience | numericFormatter: 'Y' }}</p>
+                <p>Notice Period: {{ professionalForm.value.notice_Period | numericFormatter: 'D' }} </p>
+                <p>Current Pay: {{ professionalForm.value.current_Pay | numericFormatter: '₹' }} </p>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>

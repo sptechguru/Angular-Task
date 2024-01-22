@@ -1,0 +1,101 @@
+
+<section class="container-fluid">    
+<h1 class="text-center font-weight-bold text-primary text-uppercase py-2">Emplyoee Crud works!</h1>
+
+  <div class="row " >
+    <div class="col-md-4 col-lg-4 col-sm-4 col-12 card py-3">
+      <form [formGroup]="empForm" (ngSubmit)="createTodo()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">FirstName</label>
+          <input type="text" class="form-control" formControlName="firstname" placeholder="Enter Your FirstName">
+          <small class="form-text text-danger"  *ngIf="!empForm.controls['firstname'].valid && 
+          empForm.controls['firstname']?.touched">FirstName is required.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">LastName</label>
+          <input type="text" class="form-control" formControlName="lastname" placeholder="Enter Your LastName">
+       <small class="form-text text-danger"  *ngIf="!empForm.controls['lastname'].valid && 
+       empForm.controls['lastname']?.touched">LastName is required.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" formControlName="email" placeholder="Enter Your email">
+          <small id="emailHelp" class="form-text text-danger"  *ngIf="!empForm.controls['email'].valid && 
+          empForm.controls['email']?.touched">Email is required.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Date of Birth</label>
+          <input type="date" class="form-control" formControlName="dob" placeholder="Enter Your Dob">
+          <small id="emailHelp" class="form-text text-danger" *ngIf="!empForm.controls['dob'].valid && 
+          empForm.controls['dob']?.touched" >Dob is required.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Postions</label>
+          <input type="text" class="form-control" formControlName="postions" placeholder="Postions">
+          <small id="emailHelp" class="form-text text-danger" 
+          *ngIf="!empForm.controls['postions'].valid && empForm.controls['postions']?.touched">Postions is required.</small>
+
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Experience</label>
+          <input type="text" class="form-control" formControlName="experience" placeholder="Experience">
+          <small id="emailHelp" class="form-text text-danger" 
+          *ngIf="!empForm.controls['experience'].valid && empForm.controls['experience']?.touched">Experience is required.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">salary</label>
+          <input type="text" class="form-control" formControlName="salary"  placeholder="salary">
+          <small id="emailHelp" class="form-text text-danger" 
+          *ngIf="!empForm.controls['salary'].valid && empForm.controls['salary']?.touched">salary is required.</small>
+
+        </div>
+        <br/>
+      <button *ngIf="btnshow" type="submit" class="btn btn-success" [disabled]="empForm.invalid">Submit</button>
+      </form>
+      <button *ngIf="!btnshow" type="submit" class="btn btn-warning" (click)="updateEmpL()" >Update</button>
+    </div>
+
+    <div class="col-md-8 col-lg-8 col-sm-8 col-12 card py-2">
+      <div class="search">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2"   (input)="searchEmployees(searchInput.value)" #searchInput type="search" placeholder="Search Emplyoee list...." aria-label="Search">
+        </form>
+      </div>
+      <table class="table mb-5" >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Dob</th>
+            <th>Postions</th>
+            <th>Sallary</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of empList let i=index;">
+            <td>{{item?.id}}</td>
+            <td>{{item?.firstname}}</td>
+            <td>{{item?.lastname}}</td>
+            <td>{{item?.email}}</td>
+            <td>{{item?.dob}}</td>
+            <td>{{item?.postions}}</td>
+            <td>{{item?.salary}}</td>
+            <td>
+              <button type="button" class="btn btn-sm btn-warning mx-3" (click)="editTodo(item)">Edit</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-sm  btn-danger" (click)="deleteTodo(item?.id)">Delete</button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+{
+  "employee": [
+    {
+      "firstname": "sandeep",
+      "lastname": "kushwah",
+      "email": "sandeep@gmail.com",
+      "dob": "2022-07-07",
+      "experience": "4",
+      "postions": "java",
+      "salary": "5000",
+      "id": 242
+    },
+    {
+      "firstname": "sani",
+      "lastname": "pal",
+      "email": "sani124@gmail.com",
+      "dob": "2022-07-07",
+      "experience": "1",
+      "postions": "Express js",
+      "salary": "3000",
+      "id": 243
+    },
+    {
+      "firstname": "sarita",
+      "lastname": "sharma",
+      "email": "rani@gmail.com",
+      "dob": "2022-07-07",
+      "experience": "1",
+      "postions": "Django ",
+      "salary": "18000",
+      "id": 244
+    }
+  ]
+}

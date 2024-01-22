@@ -1,0 +1,223 @@
+{
+  "professional": [
+    {
+      "id": "4739",
+      "Emp_Type": "Working",
+      "years_Experience": "2024-01-21",
+      "job_Title": "Front End Devloper",
+      "job_Description": "A Front-End Developer is responsible for developing new user-facing features, determining the structure and design of web pages, building reusable codes, optimizing page loading times, and using a variety of markup languages to create the web pages.\n",
+      "current_Job": null,
+      "desired_Job_Type": [
+        {
+          "item_id": 1,
+          "item_text": "Full Time"
+        }
+      ],
+      "desired_Job_Location": [
+        {
+          "item_id": 3,
+          "item_text": "Pune"
+        },
+        {
+          "item_id": 6,
+          "item_text": "Indore"
+        },
+        {
+          "item_id": 2,
+          "item_text": "Bangaluru"
+        },
+        {
+          "item_id": 4,
+          "item_text": "Navsari"
+        },
+        {
+          "item_id": 5,
+          "item_text": "New Delhi"
+        }
+      ],
+      "clent_Work": "MSM",
+      "association_Associated": "Shivam",
+      "association_Liencence_Num": "8795123",
+      "skills": [
+        {
+          "item_id": 1,
+          "item_text": "Angular"
+        },
+        {
+          "item_id": 2,
+          "item_text": "React Js"
+        },
+        {
+          "item_id": 3,
+          "item_text": "Java"
+        }
+      ],
+      "Experties": [
+        {
+          "item_id": 4,
+          "item_text": "Senior Developer"
+        },
+        {
+          "item_id": 3,
+          "item_text": "Mid Level Developer"
+        },
+        {
+          "item_id": 2,
+          "item_text": "Junior"
+        },
+        {
+          "item_id": 1,
+          "item_text": "Fresher"
+        }
+      ],
+      "functional_Industry": "Full Stack Developer",
+      "functional_Area": "Indore Area",
+      "notice_Period": "30",
+      "current_Pay": "600000"
+    },
+    {
+      "id": "0a04",
+      "Emp_Type": "Working",
+      "years_Experience": "2024-01-21",
+      "job_Title": "java Developer",
+      "job_Description": "A java Developer is responsible for developing new user-facing features, determining the structure and design of web pages, building reusable codes, optimizing page loading times, and using a variety of markup languages to create the web pages.\n",
+      "current_Job": null,
+      "desired_Job_Type": [
+        {
+          "item_id": 3,
+          "item_text": "Contractually"
+        }
+      ],
+      "desired_Job_Location": [
+        {
+          "item_id": 6,
+          "item_text": "Indore"
+        },
+        {
+          "item_id": 5,
+          "item_text": "New Delhi"
+        }
+      ],
+      "clent_Work": "MSM & LMS",
+      "association_Associated": "Sani",
+      "association_Liencence_Num": "132645",
+      "skills": [
+        {
+          "item_id": 1,
+          "item_text": "Angular"
+        },
+        {
+          "item_id": 2,
+          "item_text": "React Js"
+        },
+        {
+          "item_id": 3,
+          "item_text": "Java"
+        }
+      ],
+      "Experties": [
+        {
+          "item_id": 3,
+          "item_text": "Mid Level Developer"
+        },
+        {
+          "item_id": 4,
+          "item_text": "Senior Developer"
+        }
+      ],
+      "functional_Industry": "Full Stack Developer",
+      "functional_Area": "Bnglorae",
+      "notice_Period": "90",
+      "current_Pay": "1000000 Rs"
+    },
+    {
+      "id": "4879",
+      "Emp_Type": "Freelancer",
+      "years_Experience": "2024-01-21",
+      "job_Title": "Angular Developer",
+      "job_Description": "Angular is a development platform, built on TypeScript. As a platform, Angular includes: A component-based framework for building scalable web applications. A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more.",
+      "current_Job": [
+        "Pune",
+        "Bhopal"
+      ],
+      "desired_Job_Type": [
+        {
+          "item_id": 1,
+          "item_text": "Full Time"
+        },
+        {
+          "item_id": 4,
+          "item_text": "Remote Work"
+        }
+      ],
+      "desired_Job_Location": [
+        {
+          "item_id": 4,
+          "item_text": "Navsari"
+        },
+        {
+          "item_id": 5,
+          "item_text": "New Delhi"
+        },
+        {
+          "item_id": 6,
+          "item_text": "Mumbai"
+        }
+      ],
+      "clent_Work": "MSM& LMS",
+      "association_Associated": [
+        {
+          "item_id": 3,
+          "item_text": "Mid Level Developer"
+        }
+      ],
+      "association_Liencence_Num": "3423456",
+      "skills": [
+        {
+          "item_id": 1,
+          "item_text": "Angular"
+        },
+        {
+          "item_id": 4,
+          "item_text": "Python"
+        },
+        {
+          "item_id": 2,
+          "item_text": "React Js"
+        },
+        {
+          "item_id": 6,
+          "item_text": "Next Js"
+        }
+      ],
+      "Experties": [
+        {
+          "item_id": 3,
+          "item_text": "Mid Level Developer"
+        },
+        {
+          "item_id": 4,
+          "item_text": "Senior Developer"
+        }
+      ],
+      "functional_Industry": [
+        {
+          "item_id": 2,
+          "item_text": "Infosys"
+        }
+      ],
+      "functional_Area": [
+        {
+          "item_id": 1,
+          "item_text": "Front End Developer"
+        },
+        {
+          "item_id": 2,
+          "item_text": "Backend Developer"
+        }
+      ],
+      "notice_Period": 30,
+      "current_Pay": 630000
+    }
+  ]
+}
